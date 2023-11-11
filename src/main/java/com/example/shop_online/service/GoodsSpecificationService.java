@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package com.example.shop_online.service;
 
-import com.example.demo.entity.GoodsSpecification;
+import com.example.shop_online.entity.GoodsSpecification;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -8,8 +8,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  *  服务类
  * </p>
  *
- * @author zliu
- * @since 2023-11-10
+
  */
 public interface GoodsSpecificationService extends IService<GoodsSpecification> {
 

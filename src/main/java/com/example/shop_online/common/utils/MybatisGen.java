@@ -11,6 +11,7 @@ import com.baomidou.mybatisplus.generator.fill.Column;
 import java.io.File;
 import java.util.*;
 
+
 public class MybatisGen {
 
     public static void main(String[] args) {
@@ -28,7 +29,7 @@ public class MybatisGen {
         outputFileStringMap.put(OutputFile.xml, pathXml);
         FastAutoGenerator.create("jdbc:mysql://localhost:3306/zliu", "root", "123456")
                 .globalConfig(builder -> {
-                    builder.author("zliu").enableSwagger(); // 设置作者// 开启 swagger 模式
+                    builder.author("whb").enableSwagger(); // 设置作者// 开启 swagger 模式
 
                 })
                 .packageConfig(builder -> {

@@ -1,16 +1,18 @@
-package com.example.demo.service;
+package com.example.shop_online.service;
 
-import com.example.demo.entity.IndexCarousel;
+import com.example.shop_online.entity.IndexCarousel;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * <p>
  *  服务类
  * </p>
  *
- * @author zliu
- * @since 2023-11-10
+
  */
 public interface IndexCarouselService extends IService<IndexCarousel> {
 
+    List<IndexCarousel> getList(Integer distributionSite);
 }

@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package com.example.shop_online.service;
 
-import com.example.demo.entity.UserShippingAddress;
+import com.example.shop_online.entity.UserShippingAddress;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -8,8 +8,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  *  服务类
  * </p>
  *
- * @author zliu
- * @since 2023-11-10
+
  */
 public interface UserShippingAddressService extends IService<UserShippingAddress> {
 

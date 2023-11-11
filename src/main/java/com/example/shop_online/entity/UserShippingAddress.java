@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.shop_online.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -17,8 +17,6 @@ import lombok.Setter;
  * 
  * </p>
  *
- * @author zliu
- * @since 2023-11-10
  */
 @Getter
 @Setter

@@ -2,10 +2,12 @@ package com.example.shop_online.common.exception;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.apache.catalina.Server;
+
 
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class ServerException extends RuntimeException{
+public class ServerException extends RuntimeException {
     private static final long serialVersionUID = 1L;
 
     private int code;
@@ -23,9 +25,9 @@ public class ServerException extends RuntimeException{
         this.msg = errorCode.getMsg();
     }
 
-    public ServerException(String msg,Throwable e) {
-        super(msg,e);
-        this.code = ErrorCode.INTERNAL_SERVER_ERROR.getCode();
+    public ServerException(String msg, Throwable e) {
+        super(msg, e);
+        this.code = ErrorCode.UNAUTHORIZED.getCode();
         this.msg = msg;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.shop_online.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,11 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
  *  前端控制器
  * </p>
  *
- * @author zliu
- * @since 2023-11-10
  */
 @RestController
-@RequestMapping("/demo/indexRecommendTab")
+@RequestMapping("/shop_online/indexRecommendTab")
 public class IndexRecommendTabController {
 
 }
