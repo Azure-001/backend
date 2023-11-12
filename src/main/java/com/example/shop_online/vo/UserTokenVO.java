@@ -6,8 +6,8 @@ import lombok.NoArgsConstructor;
 
 import java.util.HashMap;
 import java.util.Map;
-import static com.example.shop_online.constant.APIConstant.APP_TOKEN_EXPIRE_TIME;
 
+import static com.example.shop_online.constant.APIConstant.APP_TOKEN_EXPIRE_TIME;
 
 @Data
 @NoArgsConstructor

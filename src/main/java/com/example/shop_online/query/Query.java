@@ -5,7 +5,6 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
-
 @Data
 public class Query {
     @NotNull(message = "页码不能为空")

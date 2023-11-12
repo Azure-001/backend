@@ -16,7 +16,6 @@ import java.util.List;
  *  服务实现类
  * </p>
  *
-
  */
 @Service
 public class IndexRecommendServiceImpl extends ServiceImpl<IndexRecommendMapper, IndexRecommend> implements IndexRecommendService {

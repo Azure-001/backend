@@ -2,7 +2,6 @@ package com.example.shop_online.common.utils;
 
 import java.util.Random;
 
-
 public class GeneratorCodeUtils {
     /**
      * 生成6位随机数

@@ -10,10 +10,8 @@ import org.mapstruct.factory.Mappers;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
-
 @Mapper
 public interface UserConvert {
-
     UserConvert INSTANCE = Mappers.getMapper(UserConvert.class);
 
     @Mapping(expression = "java(MapStruct.transferTimeStamp(entity.getBirthday()))", target = "birthday")
@@ -32,8 +30,9 @@ public interface UserConvert {
             return Timestamp.valueOf(value);
         }
 
-        public static LocalDateTime transferTimeStamp(Timestamp time){
-            return  time.toLocalDateTime();
+
+        public static LocalDateTime transferTimeStamp(Timestamp time) {
+            return time.toLocalDateTime();
         }
     }
 }

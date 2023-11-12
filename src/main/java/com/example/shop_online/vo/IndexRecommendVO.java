@@ -6,7 +6,6 @@ import lombok.Data;
 
 import java.util.List;
 
-
 @Data
 @Schema(description = "首页热门推荐")
 public class IndexRecommendVO {

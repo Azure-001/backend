@@ -11,7 +11,6 @@ import com.baomidou.mybatisplus.generator.fill.Column;
 import java.io.File;
 import java.util.*;
 
-
 public class MybatisGen {
 
     public static void main(String[] args) {
@@ -29,7 +28,7 @@ public class MybatisGen {
         outputFileStringMap.put(OutputFile.xml, pathXml);
         FastAutoGenerator.create("jdbc:mysql://localhost:3306/zliu", "root", "123456")
                 .globalConfig(builder -> {
-                    builder.author("whb").enableSwagger(); // 设置作者// 开启 swagger 模式
+                    builder.author("zliu").enableSwagger(); // 设置作者// 开启 swagger 模式
 
                 })
                 .packageConfig(builder -> {
@@ -37,8 +36,7 @@ public class MybatisGen {
                             .moduleName("shop_online") // 设置父包模块名
                             .pathInfo(outputFileStringMap);
                     // 设置mapperXml生成路径
-                })
-                .strategyConfig((scanner, builder) -> {
+                }).strategyConfig((scanner, builder) -> {
                     builder.addInclude(getTables(scanner.apply("请输入表名，多个英文逗号分隔？所有输入 all"))) // 设置需要生成的表名
                             .addTablePrefix("t_")
                             .entityBuilder()
@@ -69,5 +67,4 @@ public class MybatisGen {
     protected static List<String> getTables(String tables) {
         return "all".equals(tables) ? Collections.emptyList() : Arrays.asList(tables.split(","));
     }
-
 }

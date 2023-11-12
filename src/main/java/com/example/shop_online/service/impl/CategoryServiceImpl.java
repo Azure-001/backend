@@ -18,18 +18,18 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.shop_online.enums.CategoryRecommendEnum.ALL_RECOMMEND;
+
 /**
  * <p>
  *  服务实现类
  * </p>
  *
-
  */
 @Service
 @AllArgsConstructor
 public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> implements CategoryService {
-    private final GoodsMapper goodsMapper;
-
+ private GoodsMapper goodsMapper;
     @Override
     public List<Category> getIndexCategoryList() {
         LambdaQueryWrapper<Category> wrapper = new LambdaQueryWrapper<>();
@@ -38,6 +38,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
         wrapper.orderByDesc(Category::getCreateTime);
         List<Category> list = baseMapper.selectList(wrapper);
         return list;
+
     }
 
     @Override
@@ -67,6 +68,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
                 childrenGoodsVO.setParentId(category.getId());
                 childrenGoodsVO.setParentName(category.getName());
                 queryWrapper.clear();
+
                 List<Goods> goodsList = goodsMapper.selectList(queryWrapper.eq(Goods::getCategoryId, item.getId()));
                 List<RecommendGoodsVO> goodsVOList = GoodsConvert.INSTANCE.convertToRecommendGoodsVOList(goodsList);
                 childrenGoodsVO.setGoods(goodsVOList);

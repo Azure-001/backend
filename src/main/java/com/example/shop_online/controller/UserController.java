@@ -18,7 +18,7 @@ import static com.example.shop_online.common.utils.ObtainUserIdUtils.getUserId;
 
 /**
  * <p>
- * 前端控制器
+ *  前端控制器
  * </p>
  *
  */
@@ -26,6 +26,7 @@ import static com.example.shop_online.common.utils.ObtainUserIdUtils.getUserId;
 @RestController
 @RequestMapping("user")
 @AllArgsConstructor
+//@RequestMapping("/shop_online/user")
 public class UserController {
 
     private final UserService userService;
@@ -44,7 +45,6 @@ public class UserController {
         User userInfo = userService.getUserInfo(userId);
         return Result.ok(userInfo);
     }
-
     @Operation(summary = "修改用户信息")
     @PutMapping("/profile")
     private Result<UserVO> editUserInfo(HttpServletRequest request, @RequestBody @Validated UserVO userVO) {

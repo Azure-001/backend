@@ -4,7 +4,6 @@ import com.example.shop_online.common.exception.ErrorCode;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
-
 @Data
 @Schema(description = "响应数据")
 public class Result<T> {
@@ -26,7 +25,6 @@ public class Result<T> {
         result.setResult(data);
         return result;
     }
-
     public static <T> Result<T> error() {
         return error(ErrorCode.INTERNAL_SERVER_ERROR);
     }

@@ -7,6 +7,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+//import java.net.BindException;
 
 @Slf4j
 @RestControllerAdvice
@@ -50,3 +51,4 @@ public class ServerExceptionHandler {
         return Result.error(ErrorCode.INTERNAL_SERVER_ERROR);
     }
 }
+

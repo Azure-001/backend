@@ -14,5 +14,10 @@ import java.util.List;
  */
 public interface IndexCarouselService extends IService<IndexCarousel> {
 
+    /**
+     * 首页-广告区域
+     *
+     * @return
+     */
     List<IndexCarousel> getList(Integer distributionSite);
 }

@@ -6,7 +6,6 @@ import lombok.Data;
 
 import java.util.List;
 
-
 @Data
 public class CategoryChildrenGoodsVO {
     @Schema(description = "主键id")

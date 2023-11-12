@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
  *  服务实现类
  * </p>
  *
-
  */
 @Service
 public class IndexRecommendTabServiceImpl extends ServiceImpl<IndexRecommendTabMapper, IndexRecommendTab> implements IndexRecommendTabService {
