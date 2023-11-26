@@ -8,6 +8,7 @@ import com.example.shop_online.mapper.GoodsMapper;
 import com.example.shop_online.mapper.UserShoppingCartMapper;
 import com.example.shop_online.query.CartQuery;
 import com.example.shop_online.query.EditCartQuery;
+import com.example.shop_online.query.Query;
 import com.example.shop_online.service.UserShoppingCartService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.shop_online.vo.CartGoodsVO;
